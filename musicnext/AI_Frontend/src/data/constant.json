@@ -1,0 +1,104 @@
+{
+  "solutions": [
+    {
+      "id": 1,
+      "title": "AI-Powered Image Dehazing",
+      "slug": "ai-image-dehazing",
+      "description": "Restore clarity in hazy images using our AI-driven AOT model for dehazing.",
+      "price": 199.99,
+      "researcher": "Dr. John AI",
+      "isFeatured": true,
+      "image": "/solutions/dehazing.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Real-Time Image Enhancement",
+      "slug": "real-time-enhancement",
+      "description": "Improve image quality in real-time by removing haze while preserving details.",
+      "price": 179.99,
+      "researcher": "Prof. Jane Vision",
+      "isFeatured": true,
+      "image": "/solutions/enhancement.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Deep Learning for Image Restoration",
+      "slug": "deep-learning-restoration",
+      "description": "Explore how deep learning enhances image visibility in challenging environments.",
+      "price": 159.99,
+      "researcher": "Dr. Mike Neural",
+      "isFeatured": false,
+      "image": "/solutions/deep-learning.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Low-Light Image Enhancement",
+      "slug": "low-light-enhancement",
+      "description": "Enhance images captured in low-light or foggy conditions with AI-based restoration.",
+      "price": 189.99,
+      "researcher": "Dr. Sarah Vision",
+      "isFeatured": true,
+      "image": "/solutions/low-light.jpg"
+    },
+    {
+      "id": 5,
+      "title": "High-Resolution Image Processing",
+      "slug": "high-res-processing",
+      "description": "Process high-resolution images and remove haze effectively with AI.",
+      "price": 209.99,
+      "researcher": "Dr. Anna Pixels",
+      "isFeatured": false,
+      "image": "/solutions/high-res.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Automated Fog Removal",
+      "slug": "automated-fog-removal",
+      "description": "Seamless integration of fog and haze removal in imaging applications.",
+      "price": 219.99,
+      "researcher": "Dr. Chris AI",
+      "isFeatured": true,
+      "image": "/solutions/fog-removal.jpg"
+    },
+    {
+      "id": 7,
+      "title": "AOT Model Research",
+      "slug": "aot-model-research",
+      "description": "In-depth research on Atmospheric Optics Transformation (AOT) for dehazing.",
+      "price": 249.99,
+      "researcher": "Prof. Alex Neural",
+      "isFeatured": false,
+      "image": "/solutions/aot-research.jpg"
+    },
+    {
+      "id": 8,
+      "title": "AI for Atmospheric Image Correction",
+      "slug": "ai-atmospheric-correction",
+      "description": "Correct atmospheric distortions in images with deep learning models.",
+      "price": 169.99,
+      "researcher": "Dr. Emily Vision",
+      "isFeatured": false,
+      "image": "/solutions/atmospheric-correction.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Edge-AI Image Enhancement",
+      "slug": "edge-ai-enhancement",
+      "description": "Deploy AI dehazing models on edge devices for real-time image clarity.",
+      "price": 229.99,
+      "researcher": "Dr. David Cloud",
+      "isFeatured": true,
+      "image": "/solutions/edge-ai.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Advanced AI Image Processing",
+      "slug": "advanced-ai-processing",
+      "description": "Unlock the full potential of AI for image processing and enhancement.",
+      "price": 199.99,
+      "researcher": "Dr. Laura Optics",
+      "isFeatured": true,
+      "image": "/solutions/ai-processing.jpg"
+    }
+  ]
+}
