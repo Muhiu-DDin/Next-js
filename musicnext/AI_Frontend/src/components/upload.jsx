@@ -1,11 +1,13 @@
-'use client'
+"use client"
 import { useState } from "react";
 import axios from "axios";
 import { Button } from "./ui/moving-border";
 import { useRouter } from "next/navigation"
+import { toast } from "sonner"
 
 
-export default function UploadForm() {
+export default function UploadForm()
+ {
   const [selectedFile, setSelectedFile] = useState(null);
   const [dehazedImage, setDehazedImage] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -16,7 +18,12 @@ export default function UploadForm() {
   };
 
   const handleUpload = async () => {
-    if (!selectedFile) return alert("Please select an image!");
+    if (!selectedFile){
+      return toast("No File Selected", {
+        description: "Please upload a file before proceeding",
+      });
+      
+    };
     
     const formData = new FormData();
     formData.append("file", selectedFile);
