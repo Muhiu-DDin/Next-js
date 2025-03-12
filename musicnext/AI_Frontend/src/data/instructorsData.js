@@ -7,15 +7,15 @@ const instructorsData = [
   },
   {
     id: 2,
-    name: "Abdul Moiz",
-    designation: "B2211010602",
-    image: "/moiz.jpg",
-  },
-  {
-    id: 3,
     name: "Ghulam MohiuDDin",
     designation: "B22110106023",
     image: "/muhiu.jpg",
+  },
+  {
+    id: 3,
+    name: "Abdul Moiz",
+    designation: "B2211010602",
+    image: "/moiz.jpg",
   },
   {
     id: 4,

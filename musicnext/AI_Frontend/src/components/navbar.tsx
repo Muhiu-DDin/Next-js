@@ -25,20 +25,6 @@ export default function Navbar({ className }: { className?: string }){
                 </div>
 
                 <div className="flex flex-col gap-3">
-                    <div className="flex items-center gap-3">
-                        <HoveredLink href="/" className="w-[200px] text-left">
-                            Abdul Moiz (B22110106002)
-                        </HoveredLink>
-                        <div className="w-8 h-8 rounded-full overflow-hidden">
-                            <Image 
-                                src="/moiz.jpg" 
-                                alt="moiz" 
-                                width={30} 
-                                height={30} 
-                                className="object-cover"
-                            />
-                        </div>
-                    </div>
 
                 <div className="flex items-center gap-3">
                     <HoveredLink href="/" className="w-[200px] text-left">
@@ -48,6 +34,22 @@ export default function Navbar({ className }: { className?: string }){
                         <Image 
                             src="/muhiu.jpg" 
                             alt="mohiuddin" 
+                            width={30} 
+                            height={30} 
+                            className="object-cover"
+                        />
+                    </div>
+                </div>
+
+
+                <div className="flex items-center gap-3">
+                    <HoveredLink href="/" className="w-[200px] text-left">
+                        Abdul Moiz (B22110106002)
+                    </HoveredLink>
+                    <div className="w-8 h-8 rounded-full overflow-hidden">
+                        <Image 
+                            src="/moiz.jpg" 
+                            alt="moiz" 
                             width={30} 
                             height={30} 
                             className="object-cover"
