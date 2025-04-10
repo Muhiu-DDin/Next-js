@@ -1,11 +1,5 @@
 const instructorsData = [
   {
-    id: 1,
-    name: "Course In-Charge : Dr. Humaira Bashir",
-    designation: "",
-    image: "/incharge.jpg",
-  },
-  {
     id: 2,
     name: "Ghulam MohiuDDin",
     designation: "B22110106023",
@@ -15,13 +9,13 @@ const instructorsData = [
     id: 3,
     name: "Abdul Moiz",
     designation: "B2211010602",
-    image: "/moiz.jpg",
+    image: "/moiz.png",
   },
   {
     id: 4,
     name: "M Arham Khalid",
     designation: "B22110106042",
-    image: "/arham.jpg",
+    image: "/arham.png",
   },
 ];
 

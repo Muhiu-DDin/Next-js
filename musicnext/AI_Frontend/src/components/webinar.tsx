@@ -12,14 +12,16 @@ export default function Webinar(){
                         Deep Learning for Image Dehazing
                     </p>
                 </div>
-                <div className="mt-10">
+                <div className="mt-5">
+                    <div className="flex justify-center">
                     <HoverEffect items={featuredWebinar.map(
                         (topic) => ({
                             title: topic.title,
                             description: topic.description,
-                            link: topic.slug
+                            
                         })
                     )}/>
+                    </div>
                 </div>
             </div>
         </div>

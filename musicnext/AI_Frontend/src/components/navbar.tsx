@@ -16,7 +16,7 @@ export default function Navbar({ className }: { className?: string }){
                 </MenuItem>
                 </Link>
 
-                <MenuItem setActive={setActive} active={active} item="Members">
+                <MenuItem setActive={setActive} active={active} item="Contributors">
 
                 <div className="flex items-center gap-3 mb-2">
                     <HoveredLink href="/" className="w-[200px] text-left">
@@ -48,7 +48,7 @@ export default function Navbar({ className }: { className?: string }){
                     </HoveredLink>
                     <div className="w-8 h-8 rounded-full overflow-hidden">
                         <Image 
-                            src="/moiz.jpg" 
+                            src="/moiz.png" 
                             alt="moiz" 
                             width={30} 
                             height={30} 
@@ -63,7 +63,7 @@ export default function Navbar({ className }: { className?: string }){
                     </HoveredLink>
                     <div className="w-8 h-8 rounded-full overflow-hidden">
                         <Image 
-                            src="/arham.jpg" 
+                            src="/arham.png" 
                             alt="arham" 
                             width={30} 
                             height={30} 
@@ -77,15 +77,9 @@ export default function Navbar({ className }: { className?: string }){
 
 
                 <Link href="/RESEARCH_PAPER_AI_PROJECT_2025.pdf">
-                    <MenuItem setActive={setActive} active={active} item="Article">
+                    <MenuItem setActive={setActive} active={active} item="Research Paper">
                     </MenuItem>
                 </Link>
-
-                <Link href="/DOCUMENT.pdf">
-                    <MenuItem setActive={setActive} active={active} item="Document">
-                    </MenuItem>
-                </Link>
-
 
             </Menu>
 

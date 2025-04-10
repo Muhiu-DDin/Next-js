@@ -121,7 +121,6 @@ interface HoverEffectProps {
   items: {
     title: string;
     description: string;
-    link: string;
   }[];
   className?: string;
 }
@@ -130,11 +129,11 @@ export const HoverEffect: React.FC<HoverEffectProps> = ({ items, className }) =>
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className={clsx("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10", className)}>
+    <div className={clsx("grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10", className)}>
+
       {items.map((item, idx) => (
-        <Link
-          href={item.link}
-          key={item.link}
+        <div
+          key={item.title}
           className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -154,7 +153,7 @@ export const HoverEffect: React.FC<HoverEffectProps> = ({ items, className }) =>
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
-        </Link>
+        </div>
       ))}
     </div>
   );
@@ -163,7 +162,7 @@ export const HoverEffect: React.FC<HoverEffectProps> = ({ items, className }) =>
 // Card Component
 export const Card: React.FC<{ className?: string; children: React.ReactNode }> = ({ className, children }) => {
   return (
-    <div className={clsx("rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20", className)}>
+    <div className={clsx("rounded-2xl w-[260px] md:h-full md:w-full text-center p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20", className)}>
       <div className="relative z-50">
         <div className="p-4">{children}</div>
       </div>
