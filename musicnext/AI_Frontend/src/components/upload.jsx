@@ -9,7 +9,6 @@ import { toast } from "sonner"
 export default function UploadForm()
  {
   const [selectedFile, setSelectedFile] = useState(null);
-  const [dehazedImage, setDehazedImage] = useState(null);
   const [loading, setLoading] = useState(false);
   const router = useRouter()
 

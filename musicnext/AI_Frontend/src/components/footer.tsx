@@ -14,34 +14,36 @@ const Footer = () => {
           </p>
         </div>
 
-       
 
         <div>
-          <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+          <h3 className="text-lg font-semibold mb-4">Follow us on Github</h3>
           <ul>
+            {/* <h1>GitHub</h1> */}
             <li>
               <a href="https://github.com/Muhiu-DDin" className="hover:underline">
-                GitHub
+                Muhiu DDin
               </a>
             </li>
+            
+
             <li>
-              <a href="/RESEARCH_PAPER_AI_PROJECT_2025.pdf" className="hover:underline">
-                Research Paper
+              <a href="https://github.com/frager098" className="hover:underline">
+              M.Arham Khalid
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/moizishere-droid" className="hover:underline">
+                Abdul Moiz
               </a>
             </li>
           </ul>
         </div>
 
         <div>
-          <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-          <p>AI Research Lab, Karachi University</p>
+          <h3 className="text-lg font-semibold mb-4">Our Campus</h3>
+          <p>University Of Karachi</p>
           <p>(UBIT)</p>
-          <p>
-            Email:{" "}
-            <a href="mailto:info@aodnetproject.com" className="hover:underline">
-              muhiuddin554433@gmail.com
-            </a>
-          </p>
         </div>
       </div>
 

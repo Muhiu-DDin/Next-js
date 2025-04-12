@@ -113,7 +113,6 @@
 "use client";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import { useState } from "react";
 
 // Define Props Interface
@@ -162,7 +161,7 @@ export const HoverEffect: React.FC<HoverEffectProps> = ({ items, className }) =>
 // Card Component
 export const Card: React.FC<{ className?: string; children: React.ReactNode }> = ({ className, children }) => {
   return (
-    <div className={clsx("rounded-2xl w-[260px] md:h-full md:w-full text-center p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20", className)}>
+    <div className={clsx("rounded-2xl md:h-full md:w-full text-center p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20", className)}>
       <div className="relative z-50">
         <div className="p-4">{children}</div>
       </div>

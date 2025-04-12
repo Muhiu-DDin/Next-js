@@ -8,7 +8,7 @@ const instructorsData = [
   {
     id: 3,
     name: "Abdul Moiz",
-    designation: "B2211010602",
+    designation: "B22110106002",
     image: "/moiz.png",
   },
   {

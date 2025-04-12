@@ -16,7 +16,7 @@ export default function Navbar({ className }: { className?: string }){
                 </MenuItem>
                 </Link>
 
-                <MenuItem setActive={setActive} active={active} item="Contributors">
+                <MenuItem setActive={setActive} active={active} item="Collaborators">
 
                 <div className="flex items-center gap-3 mb-2">
                     <HoveredLink href="/" className="w-[200px] text-left">

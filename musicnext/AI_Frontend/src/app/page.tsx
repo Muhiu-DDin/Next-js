@@ -1,26 +1,11 @@
-'use client'
-import FeatureCourses from "@/components/featureCourses";
-import HeroSection from "@/components/heroSection";
-import WhyToChoose from "@/components/whyToChoose";
-import TestimonialCards from "@/components/testimonialCards"
-import Webinar from "@/components/webinar";
-import Instructors from "@/components/instructors";
-import Footer from "@/components/footer";
+export const metadata = {
+  title: "ClarityVision AI",
+  description: "Enhance hazy images with AI-powered dehazing",
+};
 
-
+import HomeClient from "@/components/homeClient";
 export default function Home() {
-
-
   return (
-    <main className="min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02]">
-        <HeroSection/>
-        <FeatureCourses/>
-        <WhyToChoose/>
-        <TestimonialCards/>
-        <Webinar/>
-        <Instructors/>
-        <Footer/>
-        
-    </main>
-  );
+      <HomeClient/>
+  );  
 }
