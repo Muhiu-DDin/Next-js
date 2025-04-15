@@ -29,9 +29,10 @@ export default function UploadForm()
 
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:5000/dehaze", formData, {
+      const response = await axios.post("https://flask-backend-ulna.onrender.com/dehaze", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
+      
 
       const dehazedImageUrl = response.data.imageUrl;
       const originalImageUrl = URL.createObjectURL(selectedFile);
