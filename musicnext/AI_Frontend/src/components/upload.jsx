@@ -61,8 +61,9 @@ export default function UploadForm()
         hover:scale-105 transition-all duration-300 ease-in-out"
       borderRadius="1.75rem"
       >
-        
-        Upload & Dehaze
+         {
+        loading ? ("Please Wait") : ("Upload & Dehaze")
+      }
       </Button>
 
     </div>
