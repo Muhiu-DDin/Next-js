@@ -12,7 +12,7 @@ export default function Navbar({ className }: { className?: string }){
     const router = useRouter();
 
     const goHome = (e : any) => {
-        e.preventDefault();
+        // e.preventDefault();
       
         if (window.location.pathname === "/") {
           window.dispatchEvent(new Event("routeChangeStart"));
@@ -41,7 +41,7 @@ export default function Navbar({ className }: { className?: string }){
                 <MenuItem setActive={setActive} active={active} item="Collaborators">
 
                 <div className="flex items-center gap-3 mb-2">
-                    <HoveredLink href="/" className="w-[200px] text-left">
+                    <HoveredLink href="#" className="w-[200px] text-left">
                     Course In-Charge : Dr. Humaira Bashir
                     </HoveredLink>
                 </div>
@@ -49,7 +49,7 @@ export default function Navbar({ className }: { className?: string }){
                 <div className="flex flex-col gap-3">
 
                 <div className="flex items-center gap-3">
-                    <HoveredLink href="/" className="w-[200px] text-left">
+                    <HoveredLink href="#" className="w-[200px] text-left">
                         Ghulam Mohiuddin (B22110106023)
                     </HoveredLink>
                     <div className="w-8 h-8 rounded-full overflow-hidden">
@@ -65,7 +65,7 @@ export default function Navbar({ className }: { className?: string }){
 
 
                 <div className="flex items-center gap-3">
-                    <HoveredLink href="/" className="w-[200px] text-left">
+                    <HoveredLink href="#" className="w-[200px] text-left">
                         Abdul Moiz (B22110106002)
                     </HoveredLink>
                     <div className="w-8 h-8 rounded-full overflow-hidden">
@@ -80,7 +80,7 @@ export default function Navbar({ className }: { className?: string }){
                 </div>
 
                 <div className="flex items-center gap-3">
-                    <HoveredLink href="/" className="w-[200px] text-left">
+                    <HoveredLink href="#" className="w-[200px] text-left">
                         Arham Khalid (B22110106042)
                     </HoveredLink>
                     <div className="w-8 h-8 rounded-full overflow-hidden">
