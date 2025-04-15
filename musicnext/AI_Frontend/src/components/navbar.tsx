@@ -11,15 +11,22 @@ export default function Navbar({ className }: { className?: string }){
     const [active, setActive] = useState<string | null>(null);
     const router = useRouter();
 
-    const goHome = (e: React.MouseEvent) => {
+    const goHome = (e : any) => {
         e.preventDefault();
+      
+        if (window.location.pathname === "/") {
+          window.dispatchEvent(new Event("routeChangeStart"));
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          return;
+        }
       
         window.dispatchEvent(new Event("routeChangeStart"));
       
         setTimeout(() => {
           router.push("/");
-        }, 2000);
+        }, 1000);
       };
+      
       
 
     return(
