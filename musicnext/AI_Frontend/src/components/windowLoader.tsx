@@ -10,7 +10,7 @@ export default function RouteChangeLoader() {
       setLoading(true);
       setTimeout(() => {
         setLoading(false);
-      }, 800);
+      }, 1000);
     };
 
     window.addEventListener("routeChangeStart", handleRouteChange);
