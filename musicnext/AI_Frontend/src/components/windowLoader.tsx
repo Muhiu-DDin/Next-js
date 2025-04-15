@@ -6,6 +6,7 @@ export default function RouteChangeLoader() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    
     const handleRouteChange = () => {
       setLoading(true);
       setTimeout(() => {
