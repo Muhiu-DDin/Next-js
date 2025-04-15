@@ -34,26 +34,29 @@ export default function ResultContent() {
   }
 
   return (
-    <div className="flex justify-center items-center gap-20 mt-20 w-full max-w-4xl mx-auto h-[29rem]">
-      <div className="text-center">
-        <h2 className="text-lg font-semibold mb-2">Original Image</h2>
-        <img
-          src={originalImage}
-          alt="Selected"
-          className="w-[250px] h-[250px] object-cover rounded-lg shadow-lg"
-        />
-      </div>
-
-      <div className="text-center">
-        <h2 className="text-lg font-semibold mb-2">Dehazed Image</h2>
-        <img
-          src={dehazedImage}
-          alt="Dehazed"
-          className="w-[250px] h-[250px] object-cover rounded-lg shadow-lg"
-        />
+    <div className="min-h-screen flex items-center justify-center px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-4xl">
+        <div className="text-center flex flex-col items-center">
+          <h2 className="text-lg font-semibold mb-4 text-white">Original Image</h2>
+          <img
+            src={originalImage}
+            alt="Selected"
+            className="w-[250px] h-[250px] object-cover rounded-lg shadow-lg"
+          />
+        </div>
+  
+        <div className="text-center flex flex-col items-center">
+          <h2 className="text-lg font-semibold mb-4 text-white">Dehazed Image</h2>
+          <img
+            src={dehazedImage}
+            alt="Dehazed"
+            className="w-[250px] h-[250px] object-cover rounded-lg shadow-lg"
+          />
+        </div>
       </div>
     </div>
   );
+  
 }
 
 
