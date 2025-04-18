@@ -4,7 +4,6 @@ import axios from "axios";
 import { Button } from "./ui/moving-border";
 import { useRouter } from "next/navigation"
 import { toast } from "sonner"
-
 export default function UploadForm()
  {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -33,7 +32,7 @@ export default function UploadForm()
               setStatus("error");
               toast("Error checking server status", { description: "Unable to reach server" });
             }
-          } , 7000
+          } , 5000
         )
       }
     }
@@ -89,9 +88,15 @@ export default function UploadForm()
         hover:scale-105 transition-all duration-300 ease-in-out"
       borderRadius="1.75rem"
       >
-         {
-        loading ? ("Please Wait") : ("Upload & Dehaze")
-      }
+         
+        {loading ? (
+          <div className="flex items-center gap-2">
+            <span>Please Wait</span>
+          </div>
+        ) : (
+          "Upload & Dehaze"
+        )}
+        
       </Button>
 
     </div>

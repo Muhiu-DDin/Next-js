@@ -41,23 +41,20 @@ export default function ResultContent() {
           <img
             src={originalImage}
             alt="Selected"
-            className="w-full max-w-[250px] aspect-square object-cover rounded-lg shadow-lg"
+            className="h-[250px] w-[250px] object-cover rounded-lg shadow-lg"
           />
         </div>
-  
+
         <div className="text-center flex flex-col items-center">
           <h2 className="text-base sm:text-lg font-semibold mb-4 text-white">Dehazed Image</h2>
           <img
             src={dehazedImage}
             alt="Dehazed"
-            className="w-full max-w-[250px] aspect-square object-cover rounded-lg shadow-lg"
+            className="h-[250px] w-[250px] object-cover rounded-lg shadow-lg"
+
           />
         </div>
       </div>
     </div>
   );
-  
-  
 }
-
-
