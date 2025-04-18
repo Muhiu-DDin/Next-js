@@ -1,14 +1,14 @@
 "use client"
-import { useState } from "react";
+import { useState , useEffect  } from "react";
 import axios from "axios";
 import { Button } from "./ui/moving-border";
 import { useRouter } from "next/navigation"
 import { toast } from "sonner"
 
-
 export default function UploadForm()
  {
   const [selectedFile, setSelectedFile] = useState(null);
+  const [status, setStatus] = useState("checking...");
   const [loading, setLoading] = useState(false);
   const router = useRouter()
 
@@ -16,19 +16,46 @@ export default function UploadForm()
     setSelectedFile(e.target.files[0]);
   };
 
+  useEffect(() => {
+    async function healthCheck() {
+      try {
+        const response = await axios.get("https://flask-backend-ulna.onrender.com/health");
+        console.log("Backend is healthy", response.data);
+        setStatus(response?.data.status);
+      } catch (error) {
+        setTimeout(
+          async ()=>{
+            try{
+                const retryResponse = await axios.get("https://flask-backend-ulna.onrender.com/health");
+                setStatus(retryResponse?.data.status)
+            }catch(error){
+              console.log("health check error =>" , error.message)
+              setStatus("error");
+              toast("Error checking server status", { description: "Unable to reach server" });
+            }
+          } , 7000
+        )
+      }
+    }
+
+    healthCheck();
+  }, []);
+
+
+
   const handleUpload = async () => {
     if (!selectedFile){
       return toast("No File Selected", {
         description: "Please upload a file before proceeding",
       });
-      
-    };
+    }; 
     
     const formData = new FormData();
     formData.append("file", selectedFile);
 
     try {
       setLoading(true);
+      console.log("status =>" , status)
       const response = await axios.post("https://flask-backend-ulna.onrender.com/dehaze", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
