@@ -12,7 +12,7 @@ from model import AODNet  # Import your model
 from flask_cors import CORS 
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://dehazeai.vercel.app"])
 
 # ✅ Ensure model directory exists
 MODEL_DIR = "saved_models"
@@ -84,6 +84,10 @@ def dehaze_image():
     return jsonify({
         "imageUrl": f"{request.host_url}static/{output_filename}"
     })
+
+@app.route("/health")
+def health_check():
+    return jsonify(status="ok"), 200
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)

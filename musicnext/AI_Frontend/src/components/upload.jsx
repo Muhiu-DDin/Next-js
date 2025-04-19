@@ -30,7 +30,6 @@ export default function UploadForm()
             }catch(error){
               console.log("health check error =>" , error.message)
               setStatus("error");
-              toast("Error checking server status", { description: "Unable to reach server" });
             }
           } , 5000
         )
