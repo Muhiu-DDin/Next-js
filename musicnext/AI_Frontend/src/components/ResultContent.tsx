@@ -42,7 +42,7 @@ export default function ResultContent() {
             alt="Selected"
             className="h-[250px] w-[250px] object-cover rounded-lg shadow-lg"
           />
-          <h2 className="text-base py-2 sm:text-lg font-semibold mb-4 text-white hidden md:block">Original Image</h2>
+          <h2 className="text-base mt-3 sm:text-lg font-semibold mb-4 text-white hidden md:block">Original Image</h2>
         </div>
 
         <div className="text-center flex flex-col items-center">
@@ -51,7 +51,7 @@ export default function ResultContent() {
             alt="Dehazed"
             className="h-[250px] w-[250px] object-cover rounded-lg shadow-lg"
           />
-          <h2 className="text-base py-2 sm:text-lg font-semibold mb-4 text-white hidden md:block">Dehazed Image</h2>
+          <h2 className="text-base mt-3 sm:text-lg font-semibold mb-4 text-white hidden md:block">Dehazed Image</h2>
         </div>
       </div>
     </div>
