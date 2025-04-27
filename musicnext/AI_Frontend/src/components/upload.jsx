@@ -30,6 +30,7 @@ export default function UploadForm()
             }catch(error){
               console.log("health check error =>" , error.message)
               setStatus("error");
+
             }
           } , 5000
         )
@@ -56,6 +57,7 @@ export default function UploadForm()
       console.log("status =>" , status)
       const response = await axios.post("https://flask-backend-ulna.onrender.com/dehaze", formData, {
         headers: { "Content-Type": "multipart/form-data" },
+        timeout: 10000, 
       });
       
 
@@ -75,6 +77,7 @@ export default function UploadForm()
     <div className="flex flex-col items-center gap-4 p-6">
       <input
         type="file"
+        disabled={loading}
         onChange={handleFileChange}
         className="p-2 file:border-transparent px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-transparent text-white file:bg-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded-lg font-bold bg-clip-text file:cursor-pointer mb-5 hover:file:scale-105 file:transition-all file:duration-450 file:ease-in-out"
       />

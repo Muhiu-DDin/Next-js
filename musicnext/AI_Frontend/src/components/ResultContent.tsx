@@ -37,22 +37,21 @@ export default function ResultContent() {
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-4xl py-8">
         <div className="text-center flex flex-col items-center">
-          <h2 className="text-base sm:text-lg font-semibold mb-4 text-white">Original Image</h2>
           <img
             src={originalImage}
             alt="Selected"
             className="h-[250px] w-[250px] object-cover rounded-lg shadow-lg"
           />
+          <h2 className="text-base sm:text-lg font-semibold mb-4 text-white">Original Image</h2>
         </div>
 
         <div className="text-center flex flex-col items-center">
-          <h2 className="text-base sm:text-lg font-semibold mb-4 text-white">Dehazed Image</h2>
           <img
             src={dehazedImage}
             alt="Dehazed"
             className="h-[250px] w-[250px] object-cover rounded-lg shadow-lg"
-
           />
+          <h2 className="text-base sm:text-lg font-semibold mb-4 text-white">Dehazed Image</h2>
         </div>
       </div>
     </div>

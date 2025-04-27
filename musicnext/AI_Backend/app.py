@@ -8,13 +8,12 @@ import requests
 from flask import Flask, request, jsonify
 from PIL import Image
 from torchvision import transforms
-from model import AODNet  # Import your model
+from model import AODNet
 from flask_cors import CORS 
 
 app = Flask(__name__)
 CORS(app, origins=["https://dehazeai.vercel.app"])
 
-# ✅ Ensure model directory exists
 MODEL_DIR = "saved_models"
 MODEL_PATH = os.path.join(MODEL_DIR, "dehaze_net_epoch_17.pth")
 MODEL_URL = "https://your-external-storage.com/dehaze_net_epoch_17.pth"
@@ -32,7 +31,7 @@ if not os.path.exists(MODEL_PATH):
     except requests.exceptions.RequestException as e:
         print(f"❌ Error downloading model: {e}")
 
-# ✅ Load Model Safely
+
 try:
     torch.serialization.add_safe_globals([nn.ReLU, AODNet])
     
@@ -44,14 +43,14 @@ try:
     elif isinstance(checkpoint, dict):
         dehaze_net.load_state_dict(checkpoint)
     else:
-        dehaze_net = checkpoint  # If checkpoint is a full model object
+        dehaze_net = checkpoint  
 
     dehaze_net.eval()
     print("✅ Model loaded successfully!")
 except Exception as e:
     print(f"❌ Error loading model: {e}")
 
-# ✅ Image Preprocessing
+
 transform = transforms.Compose([
     transforms.Resize((256, 256)),  
     transforms.ToTensor(),
@@ -71,16 +70,14 @@ def dehaze_image():
 
     output_image = transforms.ToPILImage()(output_tensor.squeeze(0))
 
-    # ✅ Ensure static folder exists
     static_folder = "static"
     os.makedirs(static_folder, exist_ok=True)
 
-    # ✅ Generate a unique filename and save the image
     output_filename = f"{uuid.uuid4().hex}.jpg"
     output_path = os.path.join(static_folder, output_filename)
     output_image.save(output_path)
 
-    # return jsonify({"imageUrl": f"http://127.0.0.1:5000/static/{output_filename}"})
+
     return jsonify({
         "imageUrl": f"{request.host_url}static/{output_filename}"
     })
